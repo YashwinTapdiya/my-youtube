@@ -1,18 +1,18 @@
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { toggleMenu } from "../utils/appSlice";
 
 const Header = () => {
   const dispatch = useDispatch();
-  const handleToggleMenu = ()=>{
+  const handleToggleMenu = () => {
     //i need to change the state of toggleMenu from appSlice
     dispatch(toggleMenu());
-  }
+  };
   return (
     <div className="grid grid-flow-col p-2 m-2 shadow-lg">
       <div className="flex col-span-1">
         <img
-        onClick={handleToggleMenu}
+          onClick={handleToggleMenu}
           className="h-8 cursor-pointer "
           alt="menu"
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBvJVY9J0u5f4eKb1CpggtpThzlSHCvLZ62w&usqp=CAU"
